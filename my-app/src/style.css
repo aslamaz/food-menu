@@ -1,0 +1,328 @@
+.headerDiv{
+    position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 20px hsla(207, 24%, 35%, 0.1);
+  background-color: #151418;
+  z-index: 1;
+  position: fixed;
+}
+
+.navDiv{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 30px;
+   
+}
+
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .menu a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu a:focus {
+    opacity: 1;
+    color: #3632f6;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .menu {
+      flex-direction: column;
+      background-color: #151418;
+      align-items: start;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+  
+    .menu a {
+      margin-left: 12px;
+    }
+  
+    .menu li {
+      margin-bottom: 10px;
+    }
+  
+    .menu-icon {
+      display: block;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  }
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 50% transparency */
+    z-index: 1;
+
+    
+}
+.img2{
+    width: 100%; /* Adjust as needed */
+    height: 100%;
+}
+.imageContainer{
+    background-color: #151418;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2; /* Above the overlay but below other components if needed */
+    text-align: center;
+     /* New styles for scrolling */
+     height: 80%; /* Set a specific height */
+     width: 100%; /* Set a width (optional) */
+     overflow-y: auto; /* Enable vertical scrolling */
+     overflow-x: hidden; /* Prevent horizontal scrolling */
+     padding: 20px; /* Optional: Add padding for better aesthetics */
+     box-sizing: border-box; /* Include padding in dimensions */
+}
+
+.imageContainer h1{
+   margin-top: 100px;
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content{
+    color: #58565d;
+    font-family: 'Courier New', Courier, monospace;
+}
+.menubtn{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+
+/* CSS */
+.button-66 {
+
+  background-color:transparent;
+  border-color: #065dd8;
+  
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inherit;
+  font-family: "Space Grotesk",-apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  min-height: 56px;
+  min-width: 120px;
+  padding: 16px 20px;
+  text-align: center;
+ 
+ 
+}
+
+.button-66:focus {
+  background-color: #065dd8;
+ 
+}
+
+@media (min-width: 768px) {
+  .button-66 {
+    padding: 16px 44px;
+    min-width: 150px;
+  }
+}
+.menumainListDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.menulistDiv {
+    width: 100%; /* Make it responsive */
+    max-width: 1200px; /* Optional: Add a max width for larger screens */
+    height: auto;
+    border: 1px solid white;
+    padding: 70px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Add space between items */
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.menuHeadName {
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%; /* Take full width to stay on top */
+    text-align: center; /* Center align for the header */
+}
+
+.menulistName {
+    text-align: start;
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+.menuDescription {
+    width: 100%; /* Make it flexible */
+    max-width: 500px; /* Optional: Maintain description width */
+    text-align: start;
+    font-size: 18px;
+    color: #58565d;
+    font-family: sans-serif;
+}
+
+.listWrap {
+    flex: 1 1 calc(50% - 20px); /* Two items per row */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-top: 20px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .listWrap {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+
+    .menuHeadName {
+        text-align: start; /* Optional: Align to the left for small screens */
+    }
+}
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+.homeh1 {
+  text-align: center;
+  color: #333;
+  
+}
+label {
+  font-size: 16px;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+input[type="text"]:focus {
+  border-color: #4e73df;
+  outline: none;
+}
+.homebutton {
+  width: 100%;
+  padding: 12px;
+  background-color: #4e73df;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #2e59d9;
+}
+.mainContainer{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wrapper div */
+.divdrpdwn {
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+/* Label styling */
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Dropdown styling */
+select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, background-color 0.3s;
+  width: 200px;
+}
+
+/* Focus state */
+select:focus {
+  border-color: #007BFF;
+  background-color: #e8f0fe;
+  outline: none;
+}
+
+/* Option styling */
+option {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Hover effect on select dropdown */
+select:hover {
+  border-color: #888;
+}
