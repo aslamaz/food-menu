@@ -126,11 +126,16 @@
     color: #58565d;
     font-family: 'Courier New', Courier, monospace;
 }
+.menu{
+  display: flex;
+  
+}
 .menubtn{
     
     display: flex;
     align-items: center;
     justify-content: center;
+    
     
 }
 

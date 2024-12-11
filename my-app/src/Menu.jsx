@@ -59,7 +59,7 @@ const Menu = () => {
                         <div className='listWrap'>
                             <div className='menulistName'>
                                 <span>{subCategories.subCategoryName}</span>
-                                $<span>{subCategories.price}</span>
+                                <span>${subCategories.price}</span>
                                 </div>
                             <div className='menuDescription'>{subCategories.subCategoryDes}</div>
                         </div>
