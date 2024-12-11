@@ -200,6 +200,8 @@
     text-align: start;
     margin-top: 40px;
     font-size: 36px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menuDescription {

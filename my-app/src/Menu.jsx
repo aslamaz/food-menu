@@ -57,7 +57,10 @@ const Menu = () => {
                         {showsubCategory.map((subCategories, key) => (
                             
                         <div className='listWrap'>
-                            <div className='menulistName'><span>{subCategories.subCategoryName}</span>.....................$<span>{subCategories.price}</span></div>
+                            <div className='menulistName'>
+                                <span>{subCategories.subCategoryName}</span>
+                                $<span>{subCategories.price}</span>
+                                </div>
                             <div className='menuDescription'>{subCategories.subCategoryDes}</div>
                         </div>
                         
