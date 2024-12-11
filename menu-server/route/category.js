@@ -26,9 +26,7 @@ router.post('/', async (req, res) => {
 router.get("/", async (req, res) => {
     try {
         const getCategory = await Category.find();
-        res.json(getCategory);
-        console.log(getCategory);
-        
+        res.json(getCategory);   
     } catch (err) {
         console.error(err.message);
         res.status(500).send("server Error");

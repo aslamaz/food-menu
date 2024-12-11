@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import {BACKEND_URL} from './config'
 
 const Home = () => {
     const [category, setCategory] = useState("");
@@ -17,7 +18,7 @@ const Home = () => {
 
 
 
-        axios.post('http://localhost:5000/Category', data).then((response) => {
+        axios.post(`${BACKEND_URL}/Category`, data).then((response) => {
             console.log(response.data);
             setCategory("");
             fetchCategory();
@@ -25,7 +26,7 @@ const Home = () => {
     }
 
     const fetchCategory = () => {
-        axios.get('http://localhost:5000/Category').then((response) => {
+        axios.get(`${BACKEND_URL}/Category`).then((response) => {
             // console.log(response.data);
             const data = response.data;
             setShowCategory(data)
@@ -43,7 +44,7 @@ const Home = () => {
 
 
 
-        axios.post('http://localhost:5000/subCategory', data).then((response) => {
+        axios.post(`${BACKEND_URL}/subCategory`, data).then((response) => {
             console.log(response.data);
             setSubCategory("");
             setSubCategoryDesc("");

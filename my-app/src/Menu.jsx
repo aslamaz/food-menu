@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Head from './Head'
 import axios from 'axios';
+import {BACKEND_URL} from './config'
 
 const Menu = () => {
     const [showCategory,setShowCategory]=useState([]);
     const [showsubCategory,setShowSubCategory]=useState([]);
 
     const fetchCategory = () => {
-        axios.get('http://localhost:5000/Category').then((response) => {
+        axios.get(`${BACKEND_URL}/Category`).then((response) => {
             // console.log(response.data);
             const data = response.data;
             setShowCategory(data)
@@ -15,7 +16,7 @@ const Menu = () => {
     }
 
     const fetchcategorywithSubcategory = (id) =>{
-        axios.get(`http://localhost:5000/subCategory/${id}`).then((response) => {
+        axios.get(`${BACKEND_URL}/subCategory/${id}`).then((response) => {
             console.log(response.data);
             const data = response.data;
             
